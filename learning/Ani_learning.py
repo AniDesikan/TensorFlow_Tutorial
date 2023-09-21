@@ -54,7 +54,7 @@ loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
 
 print(loss_fn(y_train[:1], predictions).numpy())
-
+print("This contains the number of images and their dimensions", x_train.shape)
 
 # Before training, we configure and compile the model using Keras Model.compile, set optimizer to adam, set loss to fn above, and specify metric to be evaluated
 model.compile(optimizer='adam',
