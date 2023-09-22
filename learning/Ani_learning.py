@@ -1,6 +1,8 @@
 # This is just the tutorial from Colab with notes
 
 import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
 print("Tensorflow version:", tf.__version__)
 
 # This is a database of handwritten digits that came from the tf website
@@ -55,6 +57,14 @@ loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 
 print(loss_fn(y_train[:1], predictions).numpy())
 
+#will need this to know tf.input shape for images
+print("This contains the number of images and their dimensions", x_train.shape)
+
+#uses Matplotlib to grad image number 11 and show it, just visualization of the data
+plt.figure()
+plt.imshow(x_train[10])
+plt.colorbar()
+plt.show()
 
 # Before training, we configure and compile the model using Keras Model.compile, set optimizer to adam, set loss to fn above, and specify metric to be evaluated
 model.compile(optimizer='adam',
