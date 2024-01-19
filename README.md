@@ -1,3 +1,3 @@
 # TensorFlow Tutorial
 
-Group Project for Bioinformatics Masters
+Playing around with machine learning in tensorflow.
